@@ -20,6 +20,16 @@ const webrtcProvider = new WebrtcProvider('roomName', ydoc, { signaling: ['ws://
 const pinia = createPinia()
 
 pinia.use(createPiniaYJSPlugin({ doc: ydoc }))
+
+defineStore('todo', () => {
+  // xxx
+  return {
+    // ...
+  }
+}, {
+  // enable sharing
+  sharing: true,
+})
 ```
 
 ## Thanks
