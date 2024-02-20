@@ -6,22 +6,29 @@
 [![JSDocs][jsdocs-src]][jsdocs-href]
 [![License][license-src]][license-href]
 
-_description_
+## Example
 
-> **Note**:
-> Replace `pinia-plugin-yjs`, `_description_` and `antfu` globally to use this template.
+``` ts
+import { createPinia } from 'pinia'
+import * as Y from 'yjs'
+import { WebrtcProvider } from 'y-webrtc'
+import { createPiniaYJSPlugin } from 'pinia-plugin-yjs'
 
-## Sponsors
+const ydoc = new Y.Doc()
 
-<p align="center">
-  <a href="https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg">
-    <img src='https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg'/>
-  </a>
-</p>
+const webrtcProvider = new WebrtcProvider('roomName', ydoc, { signaling: ['ws://localhost:4444'] })
+const pinia = createPinia()
+
+pinia.use(createPiniaYJSPlugin({ doc: ydoc }))
+```
+
+## Thanks
+
+- [zustand-middleware-yjs](https://github.com/joebobmiles/zustand-middleware-yjs)
 
 ## License
 
-[MIT](./LICENSE) License © 2023-PRESENT [Anthony Fu](https://github.com/antfu)
+[MIT](./LICENSE) License © 2023-PRESENT [croatialu](https://github.com/croatialu)
 
 <!-- Badges -->
 
