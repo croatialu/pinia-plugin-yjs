@@ -48,7 +48,7 @@ defineStore('todo', () => {
 [npm-downloads-href]: https://npmjs.com/package/pinia-plugin-yjs
 [bundle-src]: https://img.shields.io/bundlephobia/minzip/pinia-plugin-yjs?style=flat&colorA=080f12&colorB=1fa669&label=minzip
 [bundle-href]: https://bundlephobia.com/result?p=pinia-plugin-yjs
-[license-src]: https://img.shields.io/github/license/antfu/pinia-plugin-yjs.svg?style=flat&colorA=080f12&colorB=1fa669
-[license-href]: https://github.com/antfu/pinia-plugin-yjs/blob/main/LICENSE
+[license-src]: https://img.shields.io/github/license/croatialu/pinia-plugin-yjs.svg?style=flat&colorA=080f12&colorB=1fa669
+[license-href]: https://github.com/croatialu/pinia-plugin-yjs/blob/main/LICENSE
 [jsdocs-src]: https://img.shields.io/badge/jsdocs-reference-080f12?style=flat&colorA=080f12&colorB=1fa669
 [jsdocs-href]: https://www.jsdocs.io/package/pinia-plugin-yjs
