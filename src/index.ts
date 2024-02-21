@@ -19,7 +19,7 @@ export function createPiniaYJSPlugin(
 
     // The root Y.Map that the store is written and read from.
 
-    const docRef: ShallowRef<Y.Doc | undefined> = shallowRef(pluginOptions.doc)
+    const docRef: ShallowRef<Y.Doc | null | undefined> = shallowRef(pluginOptions.doc)
 
     const clears: (() => void)[] = []
 
@@ -36,10 +36,10 @@ export function createPiniaYJSPlugin(
 
       const clear = store.$subscribe((mutation, state) => {
         const pureState = JSON.parse(JSON.stringify(state))
-
-        doc.transact(() =>
-          patchSharedType(map, pureState))
-      })
+        doc.transact(() => {
+          patchSharedType(map, pureState)
+        })
+      }, { detached: true })
 
       clears.push(clear)
 
